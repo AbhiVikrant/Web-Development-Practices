@@ -7,6 +7,7 @@
                   initial-scale=1.0">
             <title>Introduction to CSS</title>
             <style>
+
                   p{
                    color:cornflowerblue;
                    font-size: medium;
@@ -36,6 +37,37 @@
                         height: 400px;
                         width: 400px;
                         background-color: hsla(120, 50%, 25%,0.3);
+                  }
+                  .p1{
+                        height: 200px;
+                        width: 300px;
+                        background-color: aqua;
+                  }
+                  .c1{
+                        height: 50%;
+                        width: 50%;
+                        background-color: red;
+                  }
+                  .c2{
+                        height: 50%;
+                        width: 50%;
+                        background-color: green;
+                  }
+                  .c3{
+                        height: 50%;
+                        width: 50%;
+                        background-color: blue;
+                  }
+                  #rem_p{
+                        height: 200px;
+                        width: 200px;
+                        background-color: whitesmoke;
+                        font-size: 100px;
+                  }
+                  #rem_c{
+                        height: 5rem;
+                        width: 5rem;
+                        background-color: red;
                   }
             </style>
       </head>
@@ -100,5 +132,28 @@
                         </div>
                   </li>
             </ul>
+            <hr>
+
+            <h2>Introduction to CSS Unit</h2>
+            <hr>
+            <article>
+                  <p>CSS unit is mainly divided into two parts as absolute and relative. Absolute means have specific value like inch,cm,meter in daily use unit. In CSS, pixel written as px has same concept and 1px is absolute to <b>1/96 inch</b>. But it is not every time equal to 1 px of device pixel. It may be less than one pixel of device unit. </p>
+
+                  <p>Relative Unit: CSS has some relative unit as percentage. Let us assume a div as parent having height as 200px and width as 300px. We can create an inner div inside this div having exact half the height and width of parent div by giving pixel for height as 100px and pixel for width as 150px but this is fixed, if we increase the height of parent div then child div will not adjust it according to parent div. In this case we use relative css unit and if we provide 50% to both height and width it will adjust according to parent.Examples as: </p>
+                  <div class="p1">
+                        <div class="c1"></div>
+                        <div class="c2"></div>
+                  </div>
+                  <p>Another relative unit is rem which means that it takes the unit as font-size relative of the root element that is the default font size of html. where as em takes the font size of parent. </p>
+
+                  <div id="rem_p">
+                        <div id="rem_c"></div>
+                  </div>
+                  <p>Another unit is vw and vh as viewwidth and viewheight for screen size. </p>
+                  <div style="height: 10vh; width: 100vw; background-color: aqua;" >
+                        <div style="height:3vh; width:50vw; background-color: burlywood;"></div>
+                  </div>
+            </article>
+
       </body>
 </html>
