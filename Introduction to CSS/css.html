@@ -12,6 +12,31 @@
                    font-size: medium;
                    font-weight: 700;
                   }
+                  #div_1{
+                        height: 400px;
+                        width: 400px;
+                        background-color: red;
+                  }
+                  #div_2{
+                        height: 400px;
+                        width: 400px;
+                        background-color: rgb(0, 255, 0);
+                  }
+                  #div_3{
+                        height: 400px;
+                        width: 400px;
+                        background-color: rgba(0, 0, 0, 0.5);
+                  }
+                  #div_4{
+                        height: 400px;
+                        width: 400px;
+                        background-color: #03f1f2;
+                  }
+                  #div_5{
+                        height: 400px;
+                        width: 400px;
+                        background-color: hsla(120, 50%, 25%,0.3);
+                  }
             </style>
       </head>
       <body style="background-color: antiquewhite;">
@@ -23,5 +48,57 @@
                   external</p>
             <p>External CSS has the seperate file with extension .css and it is
                   link inside head tag.</p>
+            <p>If there are multiple css rule for a tag then the last rule css
+                  applied.</p>
+            <p>Benifits of using external css as easy in debugging, maintaince
+                  and re-use with other page also.</p>
+            <p>Browser developer tools arrange styles applied to an element in
+                  order of
+                  most-to-least specific. The above example was very simple. But
+                  in huge
+                  and complex websites it gets very easy to figure out
+                  styling-related
+                  problems by inspecting.
+            </p>
+            <p>css specific selector:
+                  <ol type="I">
+                        <li>Internal</li>
+                        <li>Id</li>
+                        <li>Class</li>
+                        <li>Type</li>
+                  </ol>
+            </p>
+            <h2>Adding Color to your page::</h2>
+            <hr>
+            <p>There are different ways of adding color like simply writting color name or providing rgb or rgba value. We will discuss it in detail here</p>
+
+            <p>We are creating four div and adding background color to them using four different methods</p>
+
+            <ul>
+                  <li>
+                        <p>Adding color using color name itself in style as color: red;</p>
+                        <div id="div_1">
+
+                        </div>
+                  </li>
+                  <li>
+                        <p>Adding color using rgb value which means providing red, green blue value which goes from 0 to 255. RGB value for black is 0 0 0 and white is 255 255 255. For red it is 255 0 0 and blue as rgb(0,0,255).</p>
+                        <div id="div_2"></div>
+                  </li>
+                  <li>
+                        <p>Adding color using rgba which stands for red, green,blue,alpha. Alpha is here for obacity factor which range from 0 to 1.</p>
+                        <div id="div_3"></div>
+                  </li>
+                  <li>
+                        <p>Adding color using hex code which represents the hexadecimal format of rgba.</p>
+                        <div id="div_4"></div>
+                  </li>
+                  <li>
+                        <p>Adding color using HSL or HSLA which means Hue,Saturation,Lighness and Alpha factor. Hue goes from 0 to 255 as hue for black is 0, green is 120.</p>
+                        <div id="div_5">
+
+                        </div>
+                  </li>
+            </ul>
       </body>
 </html>
