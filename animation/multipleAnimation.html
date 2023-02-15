@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Animation Template</title>
+    <style>
+      #div1 {
+        height: 400px;
+        width: 500px;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        padding: 5px;
+        background-color: aqua;
+        animation-name: changeShape, rotateAnimation, reduceSize;
+        animation-duration: 0.5s, 0.8s, 1s;
+        animation-iteration-count: infinite, infinite, infinite;
+        animation-direction: alternate, alternate, alternate;
+
+        /* what is cubic bezier */
+        /*  Cubic Bezier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios. P0 is (0, 0) and represents the initial time and the initial state, P3 is (1, 1) and represents the final time and the final state.
+
+      The cubic-bezier() function can be used with the animation-timing-function property and the transition-timing-function property.
+       Numeric values. x1 and x2 must be a number from 0 to 1
+      */
+        animation-timing-function: cubic-bezier(1, 0.085, 0.68, 0.53);
+        animation-fill-mode: both;
+        animation-play-state: running;
+      }
+      @keyframes changeShape {
+        from {
+          border-radius: 0%;
+        }
+        to {
+          border-radius: 50%;
+        }
+      }
+      @keyframes rotateAnimation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes reduceSize {
+        from {
+          height: 400px;
+          width: 500px;
+        }
+        to {
+          height: 100px;
+          width: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+  </body>
+</html>
