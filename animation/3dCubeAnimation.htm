@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3d Cube</title>
+    <style>
+      .cube {
+        height: 200px;
+        width: 200px;
+        position: relative;
+        margin: 100px;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        transform: rotateX(25deg) rotateY(-25deg);
+        animation: rotation 30s linear infinite;
+      }
+      .face {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transition: all 1s;
+      }
+      .one {
+        background-color: aqua;
+      }
+      .two {
+        background-color: blueviolet;
+        transform: rotateY(90deg) translateZ(-100px) translateX(-100px);
+      }
+      .three {
+        background-color: brown;
+        transform: rotateY(90deg) translateX(-100px) translateZ(100px);
+      }
+      .four {
+        background-color: chartreuse;
+        transform: rotateX(90deg) translateY(100px) translateZ(100px);
+      }
+      .five {
+        background-color: goldenrod;
+        transform: rotateX(90deg) translateY(100px) translateZ(-100px);
+      }
+      .six {
+        background-color: magenta;
+        transform: rotateZ(90deg) translateZ(200px);
+      }
+      @keyframes rotation {
+        100% {
+          transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cube">
+      <div class="face one">One</div>
+      <div class="face two">Two</div>
+      <div class="face three">Three</div>
+      <div class="face four">Four</div>
+      <div class="face five">Five</div>
+      <div class="face six">Six</div>
+    </div>
+  </body>
+</html>
